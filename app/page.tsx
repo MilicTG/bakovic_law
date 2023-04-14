@@ -1,9 +1,10 @@
-import Image from 'next/image';
+import Image from "next/image";
+import logo from "@/public/logo/svg_logo.svg";
+import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/solid";
 
-import logo from "../public/logo/svg_logo.svg"
-
-import {PhoneIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
-
+export const metadata = {
+    title: 'Odvjetnik Baković',
+};
 
 export default function Home() {
     return (
@@ -17,7 +18,8 @@ export default function Home() {
                         className="px-4 xl:px-20 w-full xl:w-[1200px]"
                     />
 
-                    <h1 className="text-4xl xl:text-6xl py-10 text-center text-white">Odvjetnički ured Frano Baković</h1>
+                    <h1 className="text-4xl xl:text-6xl py-10 text-center text-white">Odvjetnički ured Frano
+                        Baković</h1>
 
                     <h3 className="text-white text-2xl xl:text-3xl text-center font-bold">
                         Kontakt info
@@ -34,8 +36,6 @@ export default function Home() {
 
 
             </div>
-
-
         </main>
     )
 }
