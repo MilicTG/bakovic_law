@@ -23,6 +23,7 @@
         "./*"
       ]
     },
+    "types": ["react/next"],
     "plugins": [
       {
         "name": "next"
