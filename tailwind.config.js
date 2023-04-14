@@ -11,7 +11,7 @@ module.exports = {
         },
         extend: {
             backgroundImage: {
-                'law-bck': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.6)), url('../public/images/img_law.jpg')"
+                'law-bck': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.6)), url('/images/img_law.jpg')"
             }
         },
     },
