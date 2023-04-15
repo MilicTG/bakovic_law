@@ -16,7 +16,7 @@ function Header() {
                         <span className="text-primary-color"> Frano </span>
                         Baković</h1>
 
-                    <h3 className="text-sm xl:text-base font-light text-stone-50 text-center xl:text-start tracking-tight xl:tracking-wide mb-10">
+                    <h3 className="text-sm xl:text-base font-light text-stone-50 text-center xl:text-start tracking-tight xl:tracking-wide mb-24 xl:mb-10">
                         Dobrodošli na stranicu našeg odvjetničkog ureda. Pružamo visokokvalitetne pravne usluge i
                         brinemo o vašim pravima i interesima.
                     </h3>
