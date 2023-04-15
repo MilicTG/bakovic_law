@@ -5,6 +5,7 @@ import Footer from "@/components/footer/Footer";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 
 import ExperienceCard from "@/components/cards/ExperienceCard";
+import PracticeCard from "@/components/cards/PracticeCard";
 
 import AsideTitle from "@/components/titles/AsideTitle";
 import SectionTitle from "@/components/titles/SectionTitle";
@@ -29,6 +30,7 @@ export {
     PrimaryButton,
 
     ExperienceCard,
+    PracticeCard,
 
     AsideTitle,
     SectionTitle,
