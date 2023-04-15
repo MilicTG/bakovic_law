@@ -7,7 +7,7 @@ const navigateToContact = async () => {
 
 function Header() {
     return (
-        <header className="bg-law-bck w-full h-[700px] xl:h-screen flex justify-center items-center bg-cover bg-center">
+        <header className="bg-law-bck w-full h-[750px] xl:h-screen flex justify-center items-center bg-cover bg-center">
             <div className="relative container mx-auto h-full flex flex-col justify-center items-center xl:items-start px-4 animate-slideleft">
 
                 <div className="w-full xl:w-3/6 animate-slideleft">

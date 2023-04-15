@@ -3,7 +3,7 @@ import {HomeModernIcon, BriefcaseIcon, ClipboardDocumentIcon, BuildingLibraryIco
 
 function PracticesSection() {
     return (
-        <section className="w-full py-24">
+        <section className="w-full py-10">
             <div className="container mx-auto px-4 flex flex-col items-center">
                 <SectionTitle title="Pravne djelatnosti"/>
                 <div className="py-8 mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 items-center">
