@@ -16,7 +16,7 @@ function Navbar() {
     const handleScroll = () => {
         const position = window.scrollY;
         setScrollPosition(position);
-        if (scrollPosition < 10) {
+        if (scrollPosition < 30) {
             setTop(true)
         } else {
             setTop(false)
