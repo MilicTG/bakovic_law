@@ -3,7 +3,7 @@ import {PencilIcon, BookOpenIcon, BuildingOffice2Icon, UserIcon} from "@heroicon
 
 function ExperienceSection() {
     return (
-        <section className="w-full bg-law-bck-two px-4 py-20 bg-cover bg-center ">
+        <section className="w-full bg-law-bck-two px-4 py-24 bg-cover bg-center ">
             <div className="container mx-auto flex flex-col justify-center items-center">
                 <SectionTitleWithDescription title="Više od 10 godina iskustva"
                                              description="Uz naše bogato znanje i iskustvo u pravnoj praksi, u mogućnosti smo donositi brze odluke i brzo se prilagođavati novim situacijama i izazovima koje postavlja posao odvjetnika."/>
