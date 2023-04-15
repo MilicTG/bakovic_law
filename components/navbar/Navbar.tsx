@@ -21,7 +21,6 @@ function Navbar() {
         } else {
             setTop(false)
         }
-        console.log(scrollPosition)
     }
 
     useEffect(() => {
