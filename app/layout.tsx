@@ -1,7 +1,7 @@
 import React from "react";
 import '@/styles/globals.css'
 
-import {Navbar} from "../components"
+import {Navbar, Footer} from "@/components";
 
 export const metadata = {
     title: 'Odvjetnik Baković',
@@ -11,9 +11,10 @@ export const metadata = {
 export default function RootLayout({children}: { children: React.ReactNode; }) {
     return (
         <html lang="en">
-        <body>
+        <body className="bg-stone-50">
         <Navbar/>
         {children}
+        <Footer/>
         </body>
         </html>
     );

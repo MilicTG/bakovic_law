@@ -4,15 +4,36 @@ import Image from "next/image";
 import logo from "@/public/logo/svg_logo.svg";
 import Link from "next/link";
 import {Divide as Hamburger} from "hamburger-react";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 
 function Navbar() {
 
     const [isOpen, setOpen] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [top, setTop] = useState(true)
+
+    const handleScroll = () => {
+        const position = window.scrollY;
+        setScrollPosition(position);
+        if (scrollPosition < 10) {
+            setTop(true)
+        } else {
+            setTop(false)
+        }
+        console.log(scrollPosition)
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
 
     return (
-        <nav className="w-full bg-stone-50 bg-opacity-10 fixed top-0 z-50">
+        <nav
+            className={`${top ? 'bg-transparent' : 'bg-stone-50'} w-full fixed top-0 z-50 bg-opacity-90 transition ease-in-out duration-300`}>
             <div className="container mx-auto flex flex-row items-center justify-between">
                 <Link href="/">
                     <Image
@@ -23,22 +44,22 @@ function Navbar() {
                 </Link>
 
                 <ul className="hidden xl:flex flex-row">
-                    <li className="text-stone-50 hover:text-primary-color font-semibold mr-6 cursor-pointer transition ease-in-out duration-300">
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         Početna
                     </li>
-                    <li className="text-stone-50 hover:text-primary-color font-semibold mr-6 cursor-pointer transition ease-in-out duration-300">
-                        Pravna područja
-                    </li>
-                    <li className="text-stone-50 hover:text-primary-color font-semibold mr-6 cursor-pointer transition ease-in-out duration-300">
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         O nama
                     </li>
-                    <li className="text-stone-50 hover:text-primary-color font-semibold mr-6 cursor-pointer transition ease-in-out duration-300">
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                        Pravna područja
+                    </li>
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         Kontakt
                     </li>
                 </ul>
 
                 <div
-                    className="flex xl:hidden items-center mr-4 text-stone-50 hover:text-stone-300 transition ease-in-out duration-300">
+                    className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} flex xl:hidden items-center mr-4 transition ease-in-out duration-300`}>
                     <Hamburger toggled={isOpen} toggle={setOpen}/>
                 </div>
 
@@ -61,10 +82,10 @@ function Navbar() {
                             Početna
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            Pravna područja
+                            O nama
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            O nama
+                            Pravna područja
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
                             Kontakt
