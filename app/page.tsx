@@ -9,8 +9,8 @@ export default function Home() {
         <main className="w-full">
             <Header/>
             <AboutUsSection/>
-            <PracticesSection/>
             <ExperienceSection/>
+            <PracticesSection/>
             <ContactSection/>
         </main>
     )

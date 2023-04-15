@@ -12,7 +12,8 @@ module.exports = {
         },
         extend: {
             backgroundImage: {
-                'law-bck': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.4)), url('/images/img_law.jpg')"
+                'law-bck': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.4)), url('/images/img_law.jpg')",
+                'law-bck-two': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7)), url('/images/img_law_two.jpg')"
             },
             colors: {
                 'primary-color': "#A97C50"

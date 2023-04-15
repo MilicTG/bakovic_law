@@ -4,7 +4,11 @@ import Footer from "@/components/footer/Footer";
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 
+import ExperienceCard from "@/components/cards/ExperienceCard";
+
 import AsideTitle from "@/components/titles/AsideTitle";
+import SectionTitle from "@/components/titles/SectionTitle";
+import SectionTitleWithDescription from "@/components/titles/SectionTitleWithDescription";
 
 import AboutUsSection from "@/components/sections/AboutUsSection";
 import PracticesSection from "@/components/sections/PracticesSection";
@@ -23,5 +27,10 @@ export {
     ContactSection,
 
     PrimaryButton,
-    AsideTitle
+
+    ExperienceCard,
+
+    AsideTitle,
+    SectionTitle,
+    SectionTitleWithDescription,
 }
