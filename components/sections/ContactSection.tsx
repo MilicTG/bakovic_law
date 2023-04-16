@@ -40,7 +40,7 @@ function ContactSection() {
                         <h5 className="text-2xl text-stone-700 font-bold mb-8">Kontakt info:</h5>
 
                         <div className="w-fit mb-8 flex flex-row items-center text-stone-700 text-sm xl:text-base font-bold">
-                            <EnvelopeIcon className="w-7 text-primary-color mr-3"/>Adresa: <span
+                            <BuildingOfficeIcon className="w-7 text-primary-color mr-3"/>Adresa: <span
                             className="font-semibold text-sm xl:text-base px-2 text-primary-color">Stjepana Radića 5, Tomislavgrad</span>
                         </div>
 
