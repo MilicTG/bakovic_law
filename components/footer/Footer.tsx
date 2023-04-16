@@ -48,7 +48,7 @@ function Footer() {
                     <h5 className="text-xl text-stone-500 font-semibold mb-4">Kontakt</h5>
 
                     <div className="w-full mb-4 flex flex-row items-center text-stone-50 text-sm font-bold">
-                        <EnvelopeIcon className="w-5 text-primary-color mr-3"/>Adresa: <span
+                        <BuildingOfficeIcon className="w-5 text-primary-color mr-3"/>Adresa: <span
                         className="font-semibold text-sm xl:text-base px-2 text-primary-color">Stjepana Radića 5</span>
                     </div>
 
