@@ -1,14 +1,21 @@
 "use client"
 import {PrimaryButton} from "@/components";
+import {scroller} from "react-scroll";
 
 const navigateToContact = async () => {
-    console.log("click")
+    scroller.scrollTo("contact", {
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -70,
+    });
 }
 
 function Header() {
     return (
         <header className="bg-law-bck w-full h-[750px] xl:h-screen flex justify-center items-center bg-cover bg-center">
-            <div className="relative container mx-auto h-full flex flex-col justify-center items-center xl:items-start px-4 animate-slideleft">
+            <div
+                className="relative container mx-auto h-full flex flex-col justify-center items-center xl:items-start px-4 animate-slideleft">
 
                 <div className="w-full xl:w-3/6 animate-slideleft">
                     <h1 className="text-5xl xl:text-7xl font-bold font-serif tracking-wide py-4 text-center xl:text-start text-stone-50">Odvjetnički

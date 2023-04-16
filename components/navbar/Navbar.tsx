@@ -5,6 +5,7 @@ import logo from "@/public/logo/svg_logo.svg";
 import Link from "next/link";
 import {Divide as Hamburger} from "hamburger-react";
 import React, {useEffect, useState} from "react";
+import {Link as ScrollLink} from "react-scroll";
 
 
 function Navbar() {
@@ -44,16 +45,42 @@ function Navbar() {
 
                 <ul className="hidden xl:flex flex-row">
                     <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
-                        Početna
+                        <Link href="/">
+                            Početna
+                        </Link>
                     </li>
                     <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
-                        O nama
+                        <ScrollLink
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            O nama
+                        </ScrollLink>
                     </li>
                     <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
-                        Pravna područja
+                        <ScrollLink
+                            to="practices"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Pravna područja
+                        </ScrollLink>
                     </li>
                     <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
-                        Kontakt
+                        <ScrollLink
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Kontakt
+                        </ScrollLink>
                     </li>
                 </ul>
 
@@ -69,7 +96,7 @@ function Navbar() {
                 >
                     <ul className="flex flex-col items-start mt-4">
                         <li>
-                            <Link href="/">
+                            <Link href="/" onClick={() => setOpen(false)}>
                                 <Image
                                     src={logo}
                                     alt="Logo"
@@ -78,16 +105,47 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            Početna
+                            <Link
+                                href="/"
+                                onClick={() => setOpen(false)}>
+                                Početna
+                            </Link>
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            O nama
+                            <ScrollLink
+                                to="about"
+                                onClick={() => setOpen(false)}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                O nama
+                            </ScrollLink>
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            Pravna područja
+                            <ScrollLink
+                                to="practices"
+                                onClick={() => setOpen(false)}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Pravna područja
+                            </ScrollLink>
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            Kontakt
+                            <ScrollLink
+                                to="contact"
+                                onClick={() => setOpen(false)}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Kontakt
+                            </ScrollLink>
                         </li>
                     </ul>
                 </div>

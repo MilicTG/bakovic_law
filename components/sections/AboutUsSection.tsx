@@ -2,7 +2,9 @@ import {AsideTitle} from "@/components"
 
 function AboutUsSection() {
     return (
-        <section className="w-full bg-stone-50 py-24">
+        <section
+            id="about"
+            className="w-full bg-stone-50 py-24">
             <div className="container mx-auto flex flex-col xl:flex-row justify-around">
                 <AsideTitle title="O nama" description="Zašto odabrati Odvjetnički ured Baković"/>
 

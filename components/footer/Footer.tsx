@@ -1,7 +1,12 @@
+"use client"
+
 import logo_light from "@/public/logo/svg_logo_light.svg"
 import Image from "next/image";
 import React from "react";
 import {PhoneIcon, EnvelopeIcon, BuildingOfficeIcon} from "@heroicons/react/24/outline";
+import {Link as ScrollLink} from "react-scroll";
+import Link from "next/link";
+
 
 function Footer() {
 
@@ -30,16 +35,42 @@ function Footer() {
 
                     <ul className="flex flex-col">
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            Početna
+                            <Link href="/">
+                                Početna
+                            </Link>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            O nama
+                            <ScrollLink
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                O nama
+                            </ScrollLink>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            Pravna područja
+                            <ScrollLink
+                                to="practices"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Pravna područja
+                            </ScrollLink>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            Kontakt
+                            <ScrollLink
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Kontakt
+                            </ScrollLink>
                         </li>
                     </ul>
                 </div>
@@ -53,7 +84,7 @@ function Footer() {
                     </div>
 
                     <div className="w-full mb-4 flex flex-row items-center text-stone-50 text-sm font-bold">
-                    <PhoneIcon
+                        <PhoneIcon
                             className="w-5 text-primary-color mr-3"/>Telefon: <span
                         className="font-semibold text-sm xl:text-base px-2 text-primary-color">+387 63 244-470</span>
                     </div>
@@ -68,7 +99,8 @@ function Footer() {
 
             <div className="border-t-[1px] border-stone-700 py-2">
                 <div className="container mx-auto px-4 flex flex-col xl:flex-row justify-items-center justify-between">
-                    <p className="text-sm text-stone-500 mb-2 xl:mb-0">Sva prava pridržana odvjetnik Frano Baković {year}.</p>
+                    <p className="text-sm text-stone-500 mb-2 xl:mb-0">Sva prava pridržana odvjetnik Frano
+                        Baković {year}.</p>
 
                     <div className="flex flex-row">
                         <p className="text-stone-500 text-sm mr-1">Dizajn i izrada: </p>
@@ -81,9 +113,7 @@ function Footer() {
                             DelminiusDevs
                         </a>
                     </div>
-
                 </div>
-
             </div>
         </footer>
     )
