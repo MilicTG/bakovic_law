@@ -8,10 +8,10 @@ export default function Home() {
     return (
         <main className="w-full">
             <Header/>
-            <AboutUsSection/>
-            <ExperienceSection/>
-            <PracticesSection/>
-            <ContactSection/>
+            {/*<AboutUsSection/>*/}
+            {/*<ExperienceSection/>*/}
+            {/*<PracticesSection/>*/}
+            {/*<ContactSection/>*/}
         </main>
     )
 }

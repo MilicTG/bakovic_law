@@ -28,7 +28,7 @@ function Header() {
                         brinemo o vašim pravima i interesima.
                     </h3>
                 </div>
-                <PrimaryButton title="Kontaktirajte nas" onClick={navigateToContact}/>
+                {/*<PrimaryButton title="Kontaktirajte nas" onClick={navigateToContact}/>*/}
             </div>
         </header>
     )
