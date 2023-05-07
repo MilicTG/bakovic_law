@@ -1,6 +1,6 @@
 import {defineConfig} from "sanity"
 import {deskTool} from "sanity/desk";
-import dynamicHeader from "@/sanity/schemas/header-schema";
+import schemas from "@/sanity/schemas";
 
 const config = defineConfig({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
@@ -10,7 +10,7 @@ const config = defineConfig({
     basePath: "/admin",
     plugins: [deskTool()],
     schema: {
-        types: [dynamicHeader]
+        types: schemas
     }
 })
 
