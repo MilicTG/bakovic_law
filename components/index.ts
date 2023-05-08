@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar/Navbar";
 import Header from "@/components/header/Header";
 import DynamicHeader from "@/components/header/DynamicHeader";
+import PageHeader from "@/components/header/PageHeader";
 import Footer from "@/components/footer/Footer";
 
 import PrimaryButton from "@/components/buttons/PrimaryButton";
@@ -22,6 +23,7 @@ export {
     Navbar,
     Header,
     DynamicHeader,
+    PageHeader,
     Footer,
 
     AboutUsSection,
