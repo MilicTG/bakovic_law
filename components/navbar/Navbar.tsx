@@ -33,7 +33,7 @@ function Navbar() {
 
     return (
         <nav
-            className={`${top ? 'bg-transparent' : 'bg-stone-50'} w-full fixed top-0 z-50 bg-opacity-90 transition ease-in-out duration-300`}>
+            className={`${top ? 'bg-transparent' : 'bg-stone-50'} w-full fixed top-0 z-40 bg-opacity-90 transition ease-in-out duration-300`}>
             <div className="container mx-auto flex flex-row items-center justify-between">
                 <Link href="/">
                     <Image

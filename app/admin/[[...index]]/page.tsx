@@ -5,7 +5,7 @@ import config from "@/sanity.config";
 
 function AdminPage() {
     return (
-        <section className="relative w-full h-screen bg-stone-50 z-50 top-96">
+        <section className="relative w-full h-screen bg-stone-800 z-50 top-0">
             <NextStudio config={config}/>
         </section>
 
