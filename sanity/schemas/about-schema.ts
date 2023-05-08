@@ -5,7 +5,7 @@ const aboutUsSchema = {
     fields: [
         {
             name: "aboutTitle",
-            title: "O nama",
+            title: "Naslov podnaslova",
             type: 'string'
         },
         {

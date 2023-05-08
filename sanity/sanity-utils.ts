@@ -26,20 +26,20 @@ export async function getHeaderData(): Promise<HeaderData> {
 export async function getAboutUsData(): Promise<AboutUsType> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "aboutUs"][0]{
-          _id,
-          _createdAt,
-                  aboutTitle,
-             traditionPoster {
+        _id,
+        _createdAt,
+        aboutTitle,
+        traditionPoster {
             asset{
-            _ref
-          }
-      },
+                _ref
+               }
+            },
         traditionContent,
-            bioPoster {
+        bioPoster {
             asset{
-            _ref
-        }
-      },
+                _ref
+               }
+            },
         bioContent 
     }`
     )

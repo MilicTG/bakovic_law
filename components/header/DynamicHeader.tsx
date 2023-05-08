@@ -59,7 +59,7 @@ function DynamicHeader(props: DynamicHeaderProps) {
                     {props.title}
                 </h3>
 
-                <PrimaryButton title="Kontaktirajte nas" onClick={navigateToContact}/>
+                {/*<PrimaryButton title="Kontaktirajte nas" onClick={navigateToContact}/>*/}
             </div>
 
         </header>)

@@ -1,4 +1,4 @@
-import {PageHeader} from "@/components";
+import {AboutUsSection, PageHeader} from "@/components";
 import {getAboutUsData} from "@/sanity/sanity-utils";
 
 async function AboutUsPage() {
@@ -7,10 +7,15 @@ async function AboutUsPage() {
 
     return (
         <section className="w-full">
-            <PageHeader/>
+            <PageHeader
+                image={aboutUsData.traditionPoster.asset}
+                title="O nama"
+                description="Zašto odabrati Odvjetnički ured Frano Baković"
+            />
 
-            <div className="container mx-auto px-8 xl:px-4 h-[8000px]">
+            <div className="container mx-auto px-8 xl:px-4">
 
+                <AboutUsSection aboutUsData={aboutUsData}/>
             </div>
         </section>
     )

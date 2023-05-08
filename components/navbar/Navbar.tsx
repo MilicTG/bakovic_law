@@ -49,100 +49,95 @@ function Navbar() {
                             Početna
                         </Link>
                     </li>
-                    {/*<li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>*/}
-                    {/*    <Link href="/about">*/}
-                    {/*        O nama*/}
-                    {/*    </Link>*/}
-                    {/*</li>*/}
-                    {/*<li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>*/}
-                    {/*    <ScrollLink*/}
-                    {/*        to="practices"*/}
-                    {/*        spy={true}*/}
-                    {/*        smooth={true}*/}
-                    {/*        offset={-70}*/}
-                    {/*        duration={500}*/}
-                    {/*    >*/}
-                    {/*        Pravna područja*/}
-                    {/*    </ScrollLink>*/}
-                    {/*</li>*/}
-                    {/*<li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>*/}
-                    {/*    <ScrollLink*/}
-                    {/*        to="contact"*/}
-                    {/*        spy={true}*/}
-                    {/*        smooth={true}*/}
-                    {/*        offset={-70}*/}
-                    {/*        duration={500}*/}
-                    {/*    >*/}
-                    {/*        Kontakt*/}
-                    {/*    </ScrollLink>*/}
-                    {/*</li>*/}
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                        <Link href="/about">
+                            O nama
+                        </Link>
+                    </li>
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                        <ScrollLink
+                            to="practices"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Pravna područja
+                        </ScrollLink>
+                    </li>
+                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                        <ScrollLink
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >
+                            Kontakt
+                        </ScrollLink>
+                    </li>
                 </ul>
 
-                {/*<div*/}
-                {/*    className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} flex xl:hidden items-center mr-4 transition ease-in-out duration-300`}>*/}
-                {/*    <Hamburger toggled={isOpen} toggle={setOpen}/>*/}
-                {/*</div>*/}
+                <div
+                    className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} flex xl:hidden items-center mr-4 transition ease-in-out duration-300`}>
+                    <Hamburger toggled={isOpen} toggle={setOpen}/>
+                </div>
 
-                {/*<div*/}
-                {/*    className={`absolute top-0 h-screen w-2/3 bg-stone-50 z-50 p-6 xl:hidden smooth-transition transition ease-in-out duration-300 ${*/}
-                {/*        isOpen ? "left-0" : "-left-full"*/}
-                {/*    }`}*/}
-                {/*>*/}
-                {/*    <ul className="flex flex-col items-start mt-4">*/}
-                {/*        <li>*/}
-                {/*            <Link href="/" onClick={() => setOpen(false)}>*/}
-                {/*                <Image*/}
-                {/*                    src={logo}*/}
-                {/*                    alt="Logo"*/}
-                {/*                    className=" pb-12 w-56"*/}
-                {/*                />*/}
-                {/*            </Link>*/}
-                {/*        </li>*/}
-                {/*        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">*/}
-                {/*            <Link*/}
-                {/*                href="/"*/}
-                {/*                onClick={() => setOpen(false)}>*/}
-                {/*                Početna*/}
-                {/*            </Link>*/}
-                {/*        </li>*/}
-                {/*        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">*/}
-                {/*            <ScrollLink*/}
-                {/*                to="about"*/}
-                {/*                onClick={() => setOpen(false)}*/}
-                {/*                spy={true}*/}
-                {/*                smooth={true}*/}
-                {/*                offset={-70}*/}
-                {/*                duration={500}*/}
-                {/*            >*/}
-                {/*                O nama*/}
-                {/*            </ScrollLink>*/}
-                {/*        </li>*/}
-                {/*        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">*/}
-                {/*            <ScrollLink*/}
-                {/*                to="practices"*/}
-                {/*                onClick={() => setOpen(false)}*/}
-                {/*                spy={true}*/}
-                {/*                smooth={true}*/}
-                {/*                offset={-70}*/}
-                {/*                duration={500}*/}
-                {/*            >*/}
-                {/*                Pravna područja*/}
-                {/*            </ScrollLink>*/}
-                {/*        </li>*/}
-                {/*        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">*/}
-                {/*            <ScrollLink*/}
-                {/*                to="contact"*/}
-                {/*                onClick={() => setOpen(false)}*/}
-                {/*                spy={true}*/}
-                {/*                smooth={true}*/}
-                {/*                offset={-70}*/}
-                {/*                duration={500}*/}
-                {/*            >*/}
-                {/*                Kontakt*/}
-                {/*            </ScrollLink>*/}
-                {/*        </li>*/}
-                {/*    </ul>*/}
-                {/*</div>*/}
+                <div
+                    className={`absolute top-0 h-screen w-2/3 bg-stone-50 z-50 p-6 xl:hidden smooth-transition transition ease-in-out duration-300 ${
+                        isOpen ? "left-0" : "-left-full"
+                    }`}
+                >
+                    <ul className="flex flex-col items-start mt-4">
+                        <li>
+                            <Link href="/" onClick={() => setOpen(false)}>
+                                <Image
+                                    src={logo}
+                                    alt="Logo"
+                                    className=" pb-12 w-56"
+                                />
+                            </Link>
+                        </li>
+                        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
+                            <Link
+                                href="/"
+                                onClick={() => setOpen(false)}>
+                                Početna
+                            </Link>
+                        </li>
+                        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
+                            <Link
+                                href="/about"
+                                onClick={() => setOpen(false)}>
+                                O nama
+                            </Link>
+                        </li>
+                        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
+                            <ScrollLink
+                                to="practices"
+                                onClick={() => setOpen(false)}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Pravna područja
+                            </ScrollLink>
+                        </li>
+                        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
+                            <ScrollLink
+                                to="contact"
+                                onClick={() => setOpen(false)}
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                            >
+                                Kontakt
+                            </ScrollLink>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </nav>

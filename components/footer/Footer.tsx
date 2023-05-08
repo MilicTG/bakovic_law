@@ -40,15 +40,9 @@ function Footer() {
                             </Link>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            <ScrollLink
-                                to="about"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                            <Link href="/about">
                                 O nama
-                            </ScrollLink>
+                            </Link>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
                             <ScrollLink
