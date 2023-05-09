@@ -9,6 +9,14 @@ const aboutUsSchema = {
             type: 'string'
         },
         {
+            title: 'Naslovna slika',
+            name: 'sectionPoster',
+            type: 'image',
+            options: {
+                hotspot: true // <-- Defaults to false
+            },
+        },
+        {
             title: 'Slika pravne tradicije',
             name: 'traditionPoster',
             type: 'image',

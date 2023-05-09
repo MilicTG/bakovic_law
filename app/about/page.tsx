@@ -8,7 +8,7 @@ async function AboutUsPage() {
     return (
         <section className="w-full">
             <PageHeader
-                image={aboutUsData.traditionPoster.asset}
+                image={aboutUsData.sectionPoster.asset}
                 title="O nama"
                 description="Zašto odabrati Odvjetnički ured Frano Baković"
             />

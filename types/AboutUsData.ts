@@ -7,6 +7,7 @@ export interface AboutUsType {
     _type: string
     aboutTitle: string
     bioContent: PortableTextBlock[]
+    sectionPoster: SectionPoster
     bioPoster: BioPoster
     traditionContent: PortableTextBlock[]
     traditionPoster: TraditionPoster
@@ -26,6 +27,11 @@ export interface BioChildren {
     _type: string
     marks: any[]
     text: string
+}
+
+export interface SectionPoster{
+    _type: string
+    asset: Asset
 }
 
 export interface BioPoster {

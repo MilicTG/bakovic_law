@@ -42,7 +42,7 @@ function AboutUsSection(
                     <div
                         className="relative w-full h-[270px] xl:h-[400px] xl:w-3/5 ml-0 mt-8 xl:ml-12 xl:mt-0 rounded-xl shadow-2xl">
                         <Image className="object-cover object-center rounded-xl"
-                               src={urlFor(props.aboutUsData.traditionPoster.asset._ref).width(2000).url()}
+                               src={urlFor(props.aboutUsData.traditionPoster.asset._ref).width(1000).url()}
                                alt={props.aboutUsData._id}
                                fill={true}/>
                     </div>
@@ -72,7 +72,7 @@ function AboutUsSection(
                     <div
                         className="relative w-full h-[270px] xl:h-[400px] xl:w-3/5 mr-0 mt-20 xl:mr-12 xl:mt-0 rounded-xl shadow-2xl">
                         <Image className="object-cover object-center rounded-xl"
-                               src={urlFor(props.aboutUsData.bioPoster.asset._ref).width(2000).url()}
+                               src={urlFor(props.aboutUsData.bioPoster.asset._ref).width(1000).url()}
                                alt={props.aboutUsData._id}
                                fill={true}/>
                     </div>

@@ -29,6 +29,11 @@ export async function getAboutUsData(): Promise<AboutUsType> {
         _id,
         _createdAt,
         aboutTitle,
+        sectionPoster {
+            asset{
+                _ref
+               }
+            },
         traditionPoster {
             asset{
                 _ref
