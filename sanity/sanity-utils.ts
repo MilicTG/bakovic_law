@@ -3,6 +3,7 @@ import clientConfig from "@/sanity/config/client-config";
 import {HeaderData} from "@/types/HeaderData";
 import imageUrlBuilder from '@sanity/image-url'
 import {AboutUsType} from "@/types/AboutUsData";
+import {LawCategoryType} from "@/types/LawCategoryData";
 
 
 export async function getHeaderData(): Promise<HeaderData> {
@@ -46,6 +47,29 @@ export async function getAboutUsData(): Promise<AboutUsType> {
                }
             },
         bioContent 
+    }`
+    )
+}
+
+export async function getLawCategories(): Promise<LawCategoryType[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "lawCategory"] {
+        _id,
+        _createdAt,
+        categoryTitle,
+        categoryDescription,
+        categoryIcon {
+            asset{
+                _ref
+               }
+            },
+        "slug": slug.current,    
+        sectionPoster {
+            asset{
+                _ref
+               }
+            },
+        categoryContent,
     }`
     )
 }

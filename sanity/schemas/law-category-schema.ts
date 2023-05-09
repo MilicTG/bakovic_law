@@ -10,7 +10,7 @@ const lawCategorySchema = {
         },
         {
             name: 'categoryIcon',
-            title: 'Ikona kategorije',
+            title: 'Ikona djelatnosti',
             type: 'image',
             options: {
                 hotspot: true // <-- Defaults to false
