@@ -5,7 +5,6 @@ import React from "react";
 
 interface PageHeaderProps{
     title: string,
-    description: string,
     image: Asset
 }
 
@@ -19,12 +18,9 @@ function PageHeader(props: PageHeaderProps) {
                    src={urlFor(props.image._ref).width(2000).url()} alt={props.title} fill={true}/>
 
             <div  className="w-full h-full px-8 xl:px-4 flex justify-center items-center flex-col bg-stone-900 bg-opacity-80 animate-slideleft z-30">
-                <h2 className="text-3xl xl:text-5xl font-bold text-stone-50 text-center xl:text-start tracking-tight xl:tracking-wide animate-slideup">
+                <h2 className="text-3xl xl:text-5xl font-bold font-serif text-stone-50 text-center xl:text-start tracking-tight xl:tracking-wide animate-slideup">
                     {props.title}
                 </h2>
-                <p className="text-base xl:text-2xl font-bold font-serif tracking-wide py-4 text-center text-stone-50 animate-slideup">
-                    {props.description}
-                </p>
             </div>
         </header>
     )

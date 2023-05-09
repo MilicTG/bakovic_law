@@ -74,6 +74,30 @@ export async function getLawCategories(): Promise<LawCategoryType[]> {
     )
 }
 
+export async function getLawCategory(slug: string): Promise<LawCategoryType> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "lawCategory" && slug.current == $slug][0] {
+        _id,
+        _createdAt,
+        categoryTitle,
+        categoryDescription,
+        categoryIcon {
+            asset{
+                _ref
+               }
+            },    
+        "slug": slug.current,    
+        sectionPoster {
+            asset{
+                _ref
+               }
+            },
+        categoryContent,
+    }`,
+        {slug}
+    )
+}
+
 
 const builder = imageUrlBuilder(clientConfig)
 

@@ -10,10 +10,9 @@ async function AboutUsPage() {
             <PageHeader
                 image={aboutUsData.sectionPoster.asset}
                 title="O nama"
-                description="Zašto odabrati Odvjetnički ured Frano Baković"
             />
 
-            <div className="container mx-auto px-8 xl:px-4">
+            <div className="container mx-auto px-4">
 
                 <AboutUsSection aboutUsData={aboutUsData}/>
             </div>

@@ -11,7 +11,7 @@ export interface LawCategoryType {
     categoryIcon: CategoryIcon
     categoryTitle: string
     sectionPoster: SectionPoster
-    slug: Slug
+    slug: string
 }
 
 export interface CategoryIcon {
@@ -27,9 +27,4 @@ export interface Asset {
 export interface SectionPoster {
     _type: string
     asset: Asset
-}
-
-export interface Slug {
-    _type: string
-    current: string
 }
