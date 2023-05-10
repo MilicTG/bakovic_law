@@ -55,26 +55,14 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
-                        <ScrollLink
-                            to="practices"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                        >
+                        <Link href="/practice">
                             Pravna područja
-                        </ScrollLink>
+                        </Link>
                     </li>
                     <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
-                        <ScrollLink
-                            to="contact"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                        >
+                        <Link href="/contact">
                             Kontakt
-                        </ScrollLink>
+                        </Link>
                     </li>
                 </ul>
 
@@ -113,28 +101,17 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            <ScrollLink
-                                to="practices"
-                                onClick={() => setOpen(false)}
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                            <Link
+                                href="/practice"
+                                onClick={() => setOpen(false)}>
                                 Pravna područja
-                            </ScrollLink>
+                            </Link>
                         </li>
                         <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
-                            <ScrollLink
-                                to="contact"
-                                onClick={() => setOpen(false)}
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                            <Link href="/contact"
+                                  onClick={() => setOpen(false)}>
                                 Kontakt
-                            </ScrollLink>
+                            </Link>
                         </li>
                     </ul>
                 </div>

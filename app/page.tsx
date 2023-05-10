@@ -4,7 +4,9 @@ import {
     ExperienceSection,
     ContactSection,
 } from "@/components";
+import {Suspense} from 'react';
 import {getHeaderData, getLawCategories} from "@/sanity/sanity-utils";
+import HomeLoadingSkeleton from "@/app/loading";
 
 export const metadata = {
     title: 'Odvjetnik Frano Baković',
@@ -17,10 +19,12 @@ export default async function Home() {
 
     return (
         <main className="w-full">
-            <DynamicHeader title={headerData.headerDescription} images={headerData.gallery.images}/>
-            {/*<PracticesSection lawCategory={lawCategoryData}/>*/}
-            {/*<ExperienceSection/>*/}
-            {/*<ContactSection/>*/}
+            <Suspense fallback={<HomeLoadingSkeleton/>}>
+                <DynamicHeader title={headerData.headerDescription} images={headerData.gallery.images}/>
+                {/*<PracticesSection lawCategory={lawCategoryData}/>*/}
+                {/*<ExperienceSection/>*/}
+                {/*<ContactSection/>*/}
+            </Suspense>
         </main>
     )
 }

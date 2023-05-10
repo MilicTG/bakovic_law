@@ -1,5 +1,7 @@
 import {AboutUsSection, PageHeader} from "@/components";
 import {getAboutUsData} from "@/sanity/sanity-utils";
+import {Suspense} from 'react';
+import AboutLoadingSkeleton from "@/app/about/loading";
 
 async function AboutUsPage() {
 
@@ -7,15 +9,18 @@ async function AboutUsPage() {
 
     return (
         <section className="w-full">
-            <PageHeader
-                image={aboutUsData.sectionPoster.asset}
-                title="O nama"
-            />
+            <Suspense fallback={<AboutLoadingSkeleton/>}>
+                
+                <PageHeader
+                    image={aboutUsData.sectionPoster.asset}
+                    title="O nama"
+                />
 
-            <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4">
 
-                <AboutUsSection aboutUsData={aboutUsData}/>
-            </div>
+                    <AboutUsSection aboutUsData={aboutUsData}/>
+                </div>
+            </Suspense>
         </section>
     )
 }

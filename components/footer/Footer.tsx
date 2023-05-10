@@ -45,26 +45,14 @@ function Footer() {
                             </Link>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            <ScrollLink
-                                to="practices"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                            <Link href="/practice">
                                 Pravna područja
-                            </ScrollLink>
+                            </Link>
                         </li>
                         <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
-                            <ScrollLink
-                                to="contact"
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={500}
-                            >
+                            <Link href="/contact">
                                 Kontakt
-                            </ScrollLink>
+                            </Link>
                         </li>
                     </ul>
                 </div>
