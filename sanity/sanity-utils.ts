@@ -4,6 +4,7 @@ import {HeaderData} from "@/types/HeaderData";
 import imageUrlBuilder from '@sanity/image-url'
 import {AboutUsType} from "@/types/AboutUsData";
 import {LawCategoryType} from "@/types/LawCategoryData";
+import {BlogType} from "@/types/BlogData";
 
 
 export async function getHeaderData(): Promise<HeaderData> {
@@ -93,6 +94,41 @@ export async function getLawCategory(slug: string): Promise<LawCategoryType> {
                }
             },
         categoryContent,
+    }`,
+        {slug}
+    )
+}
+
+export async function getAllBlogs(): Promise<BlogType[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "blog"] {
+        _id,
+        _createdAt,
+        title,
+        "slug": slug.current,    
+        blogImage {
+            asset{
+                _ref
+               }
+            },
+        content,
+    }`
+    )
+}
+
+export async function getSpecificBlog(slug: string): Promise<BlogType[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "blog" && slug.current == $slug][0]{
+        _id,
+        _createdAt,
+        title,
+        "slug": slug.current,    
+        blogImage {
+            asset{
+                _ref
+               }
+            },
+        content,
     }`,
         {slug}
     )

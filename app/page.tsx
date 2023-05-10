@@ -10,6 +10,7 @@ import HomeLoadingSkeleton from "@/app/loading";
 
 export const metadata = {
     title: 'Odvjetnik Frano Baković',
+    description: "Dobrodošli na stranicu našeg odvjetničkog ureda. Pružamo visokokvalitetne pravne usluge i brinemo o vašim pravima i interesima."
 };
 
 export default async function Home() {
