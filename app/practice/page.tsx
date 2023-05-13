@@ -1,5 +1,5 @@
 import {getLawCategories} from "@/sanity/sanity-utils";
-import React, {Suspense} from "react";
+import {Suspense} from "react";
 import {PageHeader, PracticesSection, StaticHeader} from "@/components";
 import PracticeLoadingSkeleton from "@/app/practice/loading";
 import practiceImage from "@/public/images/img_law_two.jpg";

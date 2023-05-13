@@ -1,15 +1,12 @@
-'use client'
-
 import {getAllBlogs} from "@/sanity/sanity-utils";
-import React, {Suspense} from "react";
+import {Suspense} from "react";
 import BlogLoadingSkeleton from "@/app/blog/loading";
 import {BlogCard, SectionTitle, StaticHeader} from "@/components";
-import blogImage from "../../public/images/img_blog.jpg"
+import blogImage from "@/public/images/img_blog.jpg"
 
 async function BlogPage() {
 
     const allBlogs = await getAllBlogs()
-
 
     return (
         <section className="w-full min-h-screen">
@@ -24,7 +21,12 @@ async function BlogPage() {
 
                     <div className="w-full grid grid-cols-1 py-20 md:grid-cols-2 xl:grid-cols-3 gap-10 items-center">
                         {allBlogs.map(blog =>
-                            <BlogCard blogData={blog} key={blog._id}/>
+                            <BlogCard
+                                title={blog.title}
+                                image={blog.blogImage.asset}
+                                slug={blog.slug}
+                                key={blog._id}
+                            />
                         )}
                     </div>
 

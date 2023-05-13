@@ -1,7 +1,7 @@
 import {getLawCategory} from "@/sanity/sanity-utils";
 import {ContactSection, ExperienceSection, PageHeader} from "@/components";
 import {PortableText} from "@portabletext/react";
-import React, {Suspense} from "react";
+import {Suspense} from "react";
 import CategoryLoadingSkeleton from "@/app/category/[slug]/loading";
 
 type PracticeProps = {

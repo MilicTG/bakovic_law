@@ -1,39 +1,30 @@
-"use client"
+'use client'
 
 import Image from "next/image";
 import logo from "@/public/logo/svg_logo.svg";
 import Link from "next/link";
 import {Divide as Hamburger} from "hamburger-react";
-import React, {useEffect, useState} from "react";
-import {Link as ScrollLink} from "react-scroll";
-
+import {useEffect, useState} from "react";
 
 function Navbar() {
 
     const [isOpen, setOpen] = useState(false);
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const [top, setTop] = useState(true)
-
-    const handleScroll = () => {
-        const position = window.scrollY;
-        setScrollPosition(position);
-        if (scrollPosition < 80) {
-            setTop(true)
-        } else {
-            setTop(false)
-        }
-    }
+    const [color, setColor] = useState(true)
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    })
+        const changeColor = () => {
+            if (window.scrollY >= 90) {
+                setColor(false)
+            } else {
+                setColor(true)
+            }
+        };
+        window.addEventListener("scroll", changeColor);
+    }, []);
 
     return (
         <nav
-            className={`${top ? 'bg-transparent' : 'bg-stone-50'} w-full fixed top-0 z-40 bg-opacity-90 transition ease-in-out duration-300`}>
+            className={`${color ? 'bg-transparent' : 'bg-stone-50'} w-full fixed top-0 z-40 bg-opacity-90 transition ease-in-out duration-300`}>
             <div className="container mx-auto flex flex-row items-center justify-between">
                 <Link href="/">
                     <Image
@@ -44,27 +35,27 @@ function Navbar() {
                 </Link>
 
                 <ul className="hidden xl:flex flex-row">
-                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                    <li className={`${color ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         <Link href="/">
                             Početna
                         </Link>
                     </li>
-                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                    <li className={`${color ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         <Link href="/about">
                             O nama
                         </Link>
                     </li>
-                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                    <li className={`${color ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         <Link href="/practice">
                             Pravna područja
                         </Link>
                     </li>
-                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                    <li className={`${color ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         <Link href="/blog">
                             Blog
                         </Link>
                     </li>
-                    <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                    <li className={`${color ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
                         <Link href="/contact">
                             Kontakt
                         </Link>
@@ -72,7 +63,7 @@ function Navbar() {
                 </ul>
 
                 <div
-                    className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} flex xl:hidden items-center mr-4 transition ease-in-out duration-300`}>
+                    className={`${color ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} flex xl:hidden items-center mr-4 transition ease-in-out duration-300`}>
                     <Hamburger toggled={isOpen} toggle={setOpen}/>
                 </div>
 

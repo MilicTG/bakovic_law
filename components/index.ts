@@ -1,3 +1,5 @@
+'use client'
+
 import Navbar from "@/components/navbar/Navbar";
 import DynamicHeader from "@/components/header/DynamicHeader";
 import StaticHeader from "@/components/header/StaticHeader";

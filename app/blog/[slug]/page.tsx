@@ -1,7 +1,6 @@
-'use client'
 
 import {getSpecificBlog} from "@/sanity/sanity-utils";
-import React, {Suspense} from "react";
+import {Suspense} from "react";
 import BlogDetailLoadingSkeleton from "@/app/blog/[slug]/loading";
 import {ContactSection, ExperienceSection, PageHeader} from "@/components";
 import {PortableText} from "@portabletext/react";
@@ -14,7 +13,6 @@ async function BlogDetailPage({params}: BlogDetailProps) {
 
     const slug = params.slug
     const blog = await getSpecificBlog(slug)
-
 
     return (
         <section className="w-full min-h-screen">
@@ -49,7 +47,6 @@ async function BlogDetailPage({params}: BlogDetailProps) {
 
                 <ExperienceSection/>
                 <ContactSection/>
-
 
             </Suspense>
         </section>

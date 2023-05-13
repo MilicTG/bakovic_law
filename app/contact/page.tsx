@@ -2,7 +2,7 @@ import {Suspense} from 'react';
 import AboutLoadingSkeleton from "@/app/about/loading";
 import {ContactSection, StaticHeader} from "@/components";
 
-import contactImage from "../../public/images/img_contact.jpg"
+import contactImage from "@/public/images/img_contact.jpg"
 
 function ContactPage() {
 
