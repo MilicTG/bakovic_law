@@ -8,6 +8,7 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 
 import ExperienceCard from "@/components/cards/ExperienceCard";
 import PracticeCard from "@/components/cards/PracticeCard";
+import BlogCard from "@/components/cards/BlogCard";
 
 import AsideTitle from "@/components/titles/AsideTitle";
 import SectionTitle from "@/components/titles/SectionTitle";
@@ -35,6 +36,7 @@ export {
 
     ExperienceCard,
     PracticeCard,
+    BlogCard,
 
     AsideTitle,
     SectionTitle,

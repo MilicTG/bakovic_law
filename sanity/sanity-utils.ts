@@ -116,7 +116,7 @@ export async function getAllBlogs(): Promise<BlogType[]> {
     )
 }
 
-export async function getSpecificBlog(slug: string): Promise<BlogType[]> {
+export async function getSpecificBlog(slug: string): Promise<BlogType> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "blog" && slug.current == $slug][0]{
         _id,

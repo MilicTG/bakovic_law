@@ -1,7 +1,8 @@
 import {getLawCategories} from "@/sanity/sanity-utils";
-import {Suspense} from "react";
-import {PageHeader, PracticesSection} from "@/components";
+import React, {Suspense} from "react";
+import {PageHeader, PracticesSection, StaticHeader} from "@/components";
 import PracticeLoadingSkeleton from "@/app/practice/loading";
+import practiceImage from "@/public/images/img_law_two.jpg";
 
 async function PracticesPage() {
 
@@ -11,10 +12,7 @@ async function PracticesPage() {
         <section className="w-full">
             <Suspense fallback={<PracticeLoadingSkeleton/>}>
 
-                <PageHeader
-                    image={lawCategoryData[0].sectionPoster.asset}
-                    title="Pravna područja"
-                />
+                <StaticHeader image={practiceImage}/>
 
                 <div className="container mx-auto px-4">
                     <PracticesSection lawCategory={lawCategoryData}/>

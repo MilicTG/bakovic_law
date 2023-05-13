@@ -22,9 +22,9 @@ export default async function Home() {
         <main className="w-full">
             <Suspense fallback={<HomeLoadingSkeleton/>}>
                 <DynamicHeader title={headerData.headerDescription} images={headerData.gallery.images}/>
-                {/*<PracticesSection lawCategory={lawCategoryData}/>*/}
-                {/*<ExperienceSection/>*/}
-                {/*<ContactSection/>*/}
+                <PracticesSection lawCategory={lawCategoryData}/>
+                <ExperienceSection/>
+                <ContactSection/>
             </Suspense>
         </main>
     )
