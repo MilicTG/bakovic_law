@@ -49,7 +49,7 @@ function Footer() {
                                 Pravna područja
                             </Link>
                         </li>
-                        <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                        <li className="text-stone-50 hover:text-primary-color font-semibold mb-2 cursor-pointer transition ease-in-out duration-300">
                             <Link href="/blog">
                                 Blog
                             </Link>

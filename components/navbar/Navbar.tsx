@@ -103,7 +103,7 @@ function Navbar() {
                                 Pravna područja
                             </Link>
                         </li>
-                        <li className={`${top ? 'text-stone-50 hover:text-primary-color' : 'text-primary-color hover:text-stone-500'} font-semibold mr-6 cursor-pointer transition ease-in-out duration-300`}>
+                        <li className="text-stone-900 hover:text-primary-color font-semibold mb-6 cursor-pointer transition ease-in-out duration-300">
                             <Link href="/blog"
                                   onClick={() => setOpen(false)}>
                                 Blog
