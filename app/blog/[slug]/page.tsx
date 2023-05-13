@@ -1,3 +1,5 @@
+'use client'
+
 import {getSpecificBlog} from "@/sanity/sanity-utils";
 import React, {Suspense} from "react";
 import BlogDetailLoadingSkeleton from "@/app/blog/[slug]/loading";
