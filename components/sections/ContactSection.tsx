@@ -35,7 +35,7 @@ function ContactSection() {
             <div className="container mx-auto px-4 flex flex-col justify-center items-center">
                 <SectionTitle title="Kontaktirajte nas"/>
 
-                <div className="w-full mt-20 flex flex-col xl:flex-row justify-around items-center">
+                <div className="w-full mt-10 flex flex-col xl:flex-row justify-around items-center">
 
 
                     <div className="w-full xl:w-fit flex flex-col">

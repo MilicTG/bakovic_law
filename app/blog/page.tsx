@@ -16,7 +16,7 @@ async function BlogPage() {
                 <StaticHeader image={blogImage}/>
 
                 <div
-                    className="container mx-auto px-4 mt-20 mb-10 flex flex-col items-center justify-center">
+                    className="container mx-auto px-4 mt-10 mb-10 flex flex-col items-center justify-center">
 
                     <SectionTitle title="Stručna publikacija"/>
 
