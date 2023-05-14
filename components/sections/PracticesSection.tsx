@@ -1,12 +1,4 @@
 import {PracticeCard, SectionTitle} from "@/components";
-import {
-    HomeModernIcon,
-    BriefcaseIcon,
-    ClipboardDocumentIcon,
-    BuildingLibraryIcon,
-    PresentationChartLineIcon,
-    ScaleIcon
-} from "@heroicons/react/24/outline";
 import {LawCategoryType} from "@/types/LawCategoryData";
 
 

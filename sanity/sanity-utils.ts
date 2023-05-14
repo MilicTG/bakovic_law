@@ -72,7 +72,7 @@ export async function getLawCategories(): Promise<LawCategoryType[]> {
                }
             },
         categoryContent,
-    }`
+    }`, { next: { revalidate: 60 } }
     )
 }
 
@@ -114,7 +114,7 @@ export async function getAllBlogs(): Promise<BlogType[]> {
                }
             },
         content,
-    }`
+    }`,{ next: { revalidate: 60 } }
     )
 }
 
