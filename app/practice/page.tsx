@@ -24,3 +24,4 @@ async function PracticesPage() {
 
 
 export default PracticesPage
+export const revalidate = 60
