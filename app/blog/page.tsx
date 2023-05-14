@@ -1,3 +1,5 @@
+'use client'
+
 import {getAllBlogs} from "@/sanity/sanity-utils";
 import {Suspense} from "react";
 import BlogLoadingSkeleton from "@/app/blog/loading";
@@ -15,7 +17,7 @@ async function BlogPage() {
                 <StaticHeader image={blogImage}/>
 
                 <div
-                    className="container mx-auto px-4 mt-10 mb-10 flex flex-col items-center justify-center">
+                    className="container mx-auto px-4 py-12 xl:py-20 flex flex-col items-center justify-center">
 
                     <SectionTitle title="Stručna publikacija"/>
 

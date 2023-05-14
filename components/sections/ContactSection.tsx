@@ -31,7 +31,7 @@ function ContactSection() {
     return (
         <section
             id="contact"
-            className="w-full py-10">
+            className="w-full py-12 xl:py-20">
             <div className="container mx-auto px-4 flex flex-col justify-center items-center">
                 <SectionTitle title="Kontaktirajte nas"/>
 

@@ -54,7 +54,7 @@ export async function getAboutUsData(): Promise<AboutUsType> {
 
 export async function getLawCategories(): Promise<LawCategoryType[]> {
     return createClient(clientConfig).fetch(
-        groq`*[_type == "lawCategory"] {
+        groq`*[_type == "lawCategory"] | order(order asc) {
         _id,
         _createdAt,
         categoryTitle,
@@ -64,7 +64,8 @@ export async function getLawCategories(): Promise<LawCategoryType[]> {
                 _ref
                }
             },
-        "slug": slug.current,    
+        "slug": slug.current,   
+        order, 
         sectionPoster {
             asset{
                 _ref
@@ -87,7 +88,8 @@ export async function getLawCategory(slug: string): Promise<LawCategoryType> {
                 _ref
                }
             },    
-        "slug": slug.current,    
+        "slug": slug.current, 
+        order,   
         sectionPoster {
             asset{
                 _ref
