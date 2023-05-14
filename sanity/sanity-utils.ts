@@ -53,6 +53,7 @@ export async function getAboutUsData(): Promise<AboutUsType> {
 }
 
 export async function getLawCategories(): Promise<LawCategoryType[]> {
+    const revalidate = 60
     return createClient(clientConfig).fetch(
         groq`*[_type == "lawCategory"] | order(order asc) {
         _id,
@@ -72,7 +73,7 @@ export async function getLawCategories(): Promise<LawCategoryType[]> {
                }
             },
         categoryContent,
-    }`, { next: { revalidate: 60 } }
+    }`, {next: {revalidate}}
     )
 }
 
@@ -102,6 +103,7 @@ export async function getLawCategory(slug: string): Promise<LawCategoryType> {
 }
 
 export async function getAllBlogs(): Promise<BlogType[]> {
+    const revalidate = 60
     return createClient(clientConfig).fetch(
         groq`*[_type == "blog"] {
         _id,
@@ -114,7 +116,7 @@ export async function getAllBlogs(): Promise<BlogType[]> {
                }
             },
         content,
-    }`,{ next: { revalidate: 60 } }
+    }`, {next: {revalidate}}
     )
 }
 
