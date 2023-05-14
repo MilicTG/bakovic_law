@@ -9,6 +9,11 @@ const lawCategorySchema = {
             type: 'string'
         },
         {
+            name: "order",
+            title: "Redosljed",
+            type: 'number'
+        },
+        {
             name: 'categoryIcon',
             title: 'Ikona djelatnosti',
             type: 'image',

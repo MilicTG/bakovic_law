@@ -11,6 +11,7 @@ export interface LawCategoryType {
     categoryIcon: CategoryIcon
     categoryTitle: string
     sectionPoster: SectionPoster
+    order: number
     slug: string
 }
 
