@@ -53,3 +53,4 @@ async function PracticePage({params}: PracticeProps) {
 }
 
 export default PracticePage
+export const revalidate = 60; // revalidate this page every 60 seconds

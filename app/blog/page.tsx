@@ -1,5 +1,3 @@
-'use client'
-
 import {getAllBlogs} from "@/sanity/sanity-utils";
 import {Suspense} from "react";
 import BlogLoadingSkeleton from "@/app/blog/loading";
@@ -40,3 +38,4 @@ async function BlogPage() {
 }
 
 export default BlogPage
+export const revalidate = 60; // revalidate this page every 60 seconds
